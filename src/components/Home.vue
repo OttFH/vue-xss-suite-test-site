@@ -10,6 +10,8 @@
     </div>
   </div>
 
+  <ToggleExamples></ToggleExamples>
+
   <div class="pages-list-container">
     <h3>Pages</h3>
 
@@ -48,8 +50,13 @@
 </template>
 
 <script>
+import ToggleExamples from "@/components/ToggleExamples";
+
 export default {
   name: "Home",
+  components: {
+    ToggleExamples,
+  },
 }
 </script>
 

@@ -8,9 +8,8 @@
       <div class="vulnerability-info-container">
         <label>Has XSS vulnerability:</label>
         <div>Yes</div>
-        <button v-on:click="loadExample()">
-          Example
-        </button>
+
+        <ExampleButton location='/simpleComment?xss=--&gt;&lt;img src="/xss-meme.jpg" onload=alert(1) /&gt;&lt;!--'/>
       </div>
     </div>
   </div>
@@ -23,6 +22,8 @@
 </template>
 
 <script>
+import ExampleButton from "@/components/ExampleButton";
+
 export default {
   name: "SimpleComment",
   data: () => {
@@ -31,10 +32,8 @@ export default {
       xss: `\u003C!-- ${params.get('xss')} --\u003E`,
     };
   },
-  methods: {
-    loadExample() {
-      window.location = '/simpleComment?xss=--\u003E\u003Cimg src="/xss-meme.jpg" onload=alert(1) /\u003E\u003C!--';
-    },
+  components: {
+    ExampleButton,
   },
 }
 </script>

@@ -8,9 +8,8 @@
       <div class="vulnerability-info-container">
         <label>Has XSS vulnerability:</label>
         <div>Yes</div>
-        <button v-on:click="loadExample()">
-          Example
-        </button>
+
+        <ExampleButton location='/escapingHref?xss=javascript:alert(1)'/>
       </div>
     </div>
   </div>
@@ -23,6 +22,8 @@
 </template>
 
 <script>
+import ExampleButton from "@/components/ExampleButton";
+
 export default {
   name: "EscapingHref",
   data: () => {
@@ -31,10 +32,8 @@ export default {
       xss: params.get('xss'),
     };
   },
-  methods: {
-    loadExample() {
-      window.location = '/escapingHref?xss=javascript:alert(1)';
-    },
+  components: {
+    ExampleButton,
   },
 }
 </script>

@@ -8,9 +8,8 @@
       <div class="vulnerability-info-container">
         <label>Has XSS vulnerability:</label>
         <div>Yes</div>
-        <button v-on:click="loadExample()">
-          Example
-        </button>
+
+        <ExampleButton location='/escapingOnload?xss=alert(1)'/>
       </div>
     </div>
   </div>
@@ -23,6 +22,7 @@
 
 <script>
 import escape from 'escape-html';
+import ExampleButton from "@/components/ExampleButton";
 
 export default {
   name: "EscapingOnLoad",
@@ -32,10 +32,8 @@ export default {
       xss: `\u003Cimg src="/xss-meme.jpg" alt="Funny Meme" onLoad="${escape(params.get('xss'))}"/\u003E`,
     };
   },
-  methods: {
-    loadExample() {
-      window.location = '/escapingOnload?xss=alert(1)';
-    },
+  components: {
+    ExampleButton,
   },
 }
 </script>

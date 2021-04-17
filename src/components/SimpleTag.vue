@@ -1,5 +1,5 @@
 <template>
-  <h1>Simple Comment</h1>
+  <h1>Simple Tag</h1>
   <div>
     <h2>Description</h2>
     <div>
@@ -8,9 +8,8 @@
       <div class="vulnerability-info-container">
         <label>Has XSS vulnerability:</label>
         <div>Yes</div>
-        <button v-on:click="loadExample()">
-          Example
-        </button>
+
+        <ExampleButton location='/simpleTag?xss=&lt;img src=/xss-meme.jpg onload=alert(1) /&gt;'/>
       </div>
     </div>
   </div>
@@ -22,6 +21,8 @@
 </template>
 
 <script>
+import ExampleButton from "@/components/ExampleButton";
+
 export default {
   name: "SimpleTag",
   data: () => {
@@ -30,10 +31,8 @@ export default {
       xss: params.get('xss'),
     };
   },
-  methods: {
-    loadExample() {
-      window.location = '/simpleTag?xss=\u003Cimg src=/xss-meme.jpg onload=alert(1) /\u003E';
-    },
+  components: {
+    ExampleButton,
   },
 }
 </script>
