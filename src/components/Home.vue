@@ -46,11 +46,21 @@
         <router-link to="/escapingOnLoad?xss=234">Event Handler</router-link>
       </div>
     </div>
+
+    <div class="pages-list-group">
+      <label>Stored</label>
+      <div>
+        <router-link to="/postData">Tag</router-link>
+      </div>
+      <div>
+        <router-link to="/readData">Value</router-link>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import ToggleExamples from "@/components/ToggleExamples";
+import ToggleExamples from '@/components/ToggleExamples';
 
 export default {
   name: "Home",

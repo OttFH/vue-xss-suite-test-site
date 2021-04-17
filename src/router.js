@@ -1,13 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from "@/components/Home";
-import EscapingComment from "@/components/EscapingComment";
-import EscapingHref from "@/components/EscapingHref";
-import EscapingOnLoad from "@/components/EscapingOnLoad";
-import EscapingTag from "@/components/EscapingTag";
-import EscapingValue from "@/components/EscapingValue";
-import SimpleComment from "@/components/SimpleComment";
-import SimpleTag from "@/components/SimpleTag";
-import SimpleValue from "@/components/SimpleValue";
+import Home from '@/components/Home';
+import EscapingComment from '@/components/EscapingComment';
+import EscapingHref from '@/components/EscapingHref';
+import EscapingOnLoad from '@/components/EscapingOnLoad';
+import EscapingTag from '@/components/EscapingTag';
+import EscapingValue from '@/components/EscapingValue';
+import SimpleComment from '@/components/SimpleComment';
+import SimpleTag from '@/components/SimpleTag';
+import SimpleValue from '@/components/SimpleValue';
+import PostData from '@/components/PostData';
+import ReadData from "@/components/ReadData";
 
 const routes = [
     {
@@ -54,6 +56,16 @@ const routes = [
         path: '/simpleValue',
         name: 'SimpleValue',
         component: SimpleValue
+    },
+    {
+        path: '/postData',
+        name: 'PostData',
+        component: PostData
+    },
+    {
+        path: '/readData',
+        name: 'ReadData',
+        component: ReadData
     },
 ]
 
