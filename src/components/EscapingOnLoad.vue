@@ -22,7 +22,7 @@
 
 <script>
 import escape from 'escape-html';
-import ExampleButton from "@/components/ExampleButton";
+import ExampleButton from '@/components/ExampleButton';
 
 export default {
   name: "EscapingOnLoad",

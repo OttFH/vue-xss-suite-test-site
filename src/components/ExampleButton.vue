@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import {exampleKey} from "@/constants";
+import {exampleKey} from '@/constants';
 
 export default {
   name: "ExampleButton",

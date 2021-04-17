@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import ExampleButton from "@/components/ExampleButton";
+import ExampleButton from '@/components/ExampleButton';
 
 export default {
   name: "SimpleTag",

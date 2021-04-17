@@ -9,7 +9,7 @@ import SimpleComment from '@/components/SimpleComment';
 import SimpleTag from '@/components/SimpleTag';
 import SimpleValue from '@/components/SimpleValue';
 import PostData from '@/components/PostData';
-import ReadData from "@/components/ReadData";
+import ReadData from '@/components/ReadData';
 
 const routes = [
     {
