@@ -43,7 +43,7 @@
         <router-link to="/escapingHref?xss=234">Href</router-link>
       </div>
       <div>
-        <router-link to="/escapingOnLoad?xss=234">Event Handler</router-link>
+        <router-link to="/escapingOnload?xss=234">Event Handler</router-link>
       </div>
     </div>
 

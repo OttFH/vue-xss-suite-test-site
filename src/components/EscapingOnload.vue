@@ -1,5 +1,5 @@
 <template>
-  <h1>Escape OnLoad</h1>
+  <h1>Escape Onload</h1>
   <div>
     <h2>Description</h2>
     <div>
@@ -25,7 +25,7 @@ import escape from 'escape-html';
 import ExampleButton from '@/components/ExampleButton';
 
 export default {
-  name: "EscapingOnLoad",
+  name: "EscapingOnload",
   data: () => {
     const params = new URLSearchParams(window.location.search);
     return {
