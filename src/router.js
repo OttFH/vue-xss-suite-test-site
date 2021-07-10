@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/components/Home';
 import EscapingComment from '@/components/EscapingComment';
 import EscapingHref from '@/components/EscapingHref';
-import EscapingOnLoad from '@/components/EscapingOnLoad';
+import EscapingOnload from '@/components/EscapingOnload';
 import EscapingTag from '@/components/EscapingTag';
 import EscapingValue from '@/components/EscapingValue';
 import SimpleComment from '@/components/SimpleComment';
@@ -29,8 +29,8 @@ const routes = [
     },
     {
         path: '/escapingOnload',
-        name: 'EscapingOnLoad',
-        component: EscapingOnLoad
+        name: 'EscapingOnload',
+        component: EscapingOnload
     },
     {
         path: '/escapingTag',
